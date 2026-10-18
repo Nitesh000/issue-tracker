@@ -1,0 +1,16 @@
+[
+  {
+    "id": "112f1656-a2f5-4576-b9e5-78eedcf9da14",
+    "title": "First",
+    "description": "This is a first issue",
+    "priority": "low",
+    "status": "open"
+  },
+  {
+    "id": "197a3247-4c81-4102-b0cd-ef275cfcf2fe",
+    "title": "Second",
+    "description": "This is a second issue",
+    "priority": "medium",
+    "status": "open"
+  }
+]
