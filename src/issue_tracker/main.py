@@ -1,5 +1,7 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
+from issue_tracker.middleware.timer import timing_middleware
 from issue_tracker.routes.issues import router as issue_router
 
 app = FastAPI()
@@ -13,6 +15,15 @@ items = [
     },
     {"id": 3, "name": "Item three"},
 ]
+
+app.middleware("http")(timing_middleware)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/health")
